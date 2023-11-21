@@ -17,37 +17,41 @@
         {
             echo "</div><div class='row justify-content-between'>";
         }
-        echo "<div class='col-4 column-gap-3 pt-2 pl-2 
+
+        echo "<div class='col-4  column-gap-3 pt-2 pl-2 
          position-relative'
         style='height:250px'>";
 
-        echo "<div class='row '>";
+        echo "<div class='container m-2'>";
 
-            echo "<div class='col-7'>";
-                echo "<img class='img-fluid rounded' src='".$row['image']."'>";
-            echo "</div>";
+            echo "<div class='row'>";
 
-            echo "<div class='col-4'>";
-                echo "<div class='row'>";
-                    echo "<p>Name: ".$row['name']."</p>";
+                echo "<div class='col-7'>";
+                    echo "<img class='img-fluid rounded' style='max-height: 150px' src='".$row['image']."'>";
                 echo "</div>";
 
-                echo "<div class='row'>";
-                    echo "<p class='text-wrap'>Price: ".$row['price']."$</p>";
+                echo "<div class='col-4'>";
+                    echo "<div class='row'>";
+                        echo "<p>Name: ".$row['name']."</p>";
+                    echo "</div>";
+
+                    echo "<div class='row'>";
+                        echo "<p class='text-wrap'>Price: ".$row['price']."$</p>";
+                    echo "</div>";
                 echo "</div>";
+
             echo "</div>";
 
-        echo "</div>";
-
-        echo "<div class='row mt-2 text-center'>";
-        echo "<p>".$row['description']."</p>";
-        echo "</div>";
+            echo "<div class='row mt-2 text-center'>";
+            echo "<p>".$row['description']."</p>";
+            echo "</div>";
 
         echo "<div class='row justify-content-center'>";
         echo "<button onclick=remove(".$row['id'].") 
         class='col-11 mb-2 btn btn-primary position-absolute bottom-0'>Remove</button>";
         echo "</div>";
 
+        echo "</div>";
 
         echo "</div>";
 
